@@ -487,23 +487,25 @@
 
         }
 
-        setInterval(() => {
+       let interval = setInterval(() => {
 
-            sayhello(l);
+           
 
             helloc.style.opacity = "0.3"
 
-            if (l == hello.length) {
-                l = 0;
-            }
-            else {
+            
+                sayhello(l);
                 l = l + 1;
-            }
+
+                if(l==hello.length){
+                   clearInterval(interval);
+                }
 
 
-        }, 2000);
 
+        }, 100);
 
+       
 
     </script>
 </body>
